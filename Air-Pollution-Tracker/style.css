@@ -1,0 +1,17 @@
+body {
+    /* The image path is relative to the location of your CSS file */
+    background-image: url('image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.container {
+    /* Using a semi-transparent background for the container to ensure text is readable */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    margin-top: 50px;
+}
