@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Pollution Tracker</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Amount of times Cities recorded with a  Certain AQI Range</h1>
+
+        
+        <div class="form-group">
+            <label for="aqiRangeSelect">Select AQI Range</label>
+            <select class="form-control" id="aqiRangeSelect">
+                <option value="20-60">20-60</option>
+                <option value="60-100">60-100</option>
+                <option value=">100">>100</option>
+            </select>
+        </div>
+
+        
+        <button id="submitBtn" class="btn btn-success">Submit Query</button>
+
+        
+        <div id="results" class="my-4">
+            
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">SPARQL Query Results</h5>
+                    <div id="queryResults"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stardog.js Script -->
+    <script src="./node_modules/stardog/dist/stardog.js"></script>
+    <!-- Custom Script -->
+    <script src="stardog2.js"></script>
+</body>
+</html>

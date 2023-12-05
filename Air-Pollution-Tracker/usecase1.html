@@ -10,18 +10,32 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center my-4">Places with safe AQI</h1>
+        <h1 class="text-center my-4">Average AQI of Cities in States</h1>
 
         <!-- City Selection Dropdown -->
         <div class="form-group">
-            <label for="citySelect">Select City</label>
-            <select class="form-control" id="citySelect">
-                <option value="Boston">Boston</option>
-                <option value="Charlotte">Charlotte</option>
-                <option value="Chicago">Chicago</option>
-                <option value="New York">New York</option>
-                <option value="Phoenix">Phoenix</option>
-                <!-- Add more cities as options here -->
+            <label for="stateSelect">Select State</label>
+            <select class="form-control" id="stateSelect">
+                <option value="Alabama">Alabama</option>
+                <option value="Arizona">Arizona</option>
+                <option value="California">California</option>
+                <option value="Colorado">Colorado</option>
+                <option value="Delaware">Delaware</option>
+                <option value="Florida">Florida</option>
+                <option value="Oklahoma">Oklahoma</option>
+
+                <option value="Connecticut">Connecticut</option>
+                <option value="Iowa">Iowa</option>
+                <option value="Kentucky">Kentucky</option>
+                <option value="Louisiana">Louisiana</option>
+
+                <option value="Maine">Maine</option>
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="Michigan">Michigan</option>
+                <option value="Nevada">Nevada</option>
+
+                <option value="New Mexico">New Mexico</option>
+                <option value="North Carolina">North Carolina</option>
             </select>
         </div>
 
@@ -29,24 +43,24 @@
         <div class="form-group">
             <label for="yearSelect">Select Year</label>
             <select class="form-control" id="yearSelect">
-                <option value="2023">2022</option>
-                <option value="2022">2021</option>
-                <option value="2021">2020</option>
+                <option value="1999">1999</option>
                 <!-- Add more years as options here -->
             </select>
         </div>
 
-        <!-- Filters Section -->
-        <div class="form-group">
-            <label for="whereFilters">Apply Filters</label>
-            <div id="whereFilters">
-                <input type="text" class="form-control mb-2" placeholder="Filter conditions">
-            </div>
-            <button class="btn btn-primary" onclick="addFilter()">+</button>
-        </div>
-
         <!-- Submit Button -->
         <button id="submitBtn" class="btn btn-success">Submit Query</button>
+
+        <!-- Results Section -->
+        <div id="results" class="my-4">
+            <!-- Results will be displayed here -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">SPARQL Query Results</h5>
+                    <div id="queryResults"></div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Stardog.js Script -->
